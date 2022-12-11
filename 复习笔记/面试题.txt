@@ -1,0 +1,951 @@
+面试题：CSS的引入方式有几种？
+	1、行内样式
+	2、内联式
+	3、外联式
+
+面试题：jquery中常用的选择器？
+面试题：CSS中常见的选择器有哪些？
+	标签选择器
+		p{}
+
+	id选择器
+		#id{}
+
+	class选择器
+		.class{}
+
+	后代选择器
+		div #id .class{}
+
+	子类选择器
+		div > .class{}
+
+	伪类选择器
+		:hover {}
+		:link {}
+
+	通用选择器
+		*{}
+
+	群组选择器
+		div, p, span{}
+
+	相邻同胞
+		div + p{}
+
+	属性选择器
+		div[title='值']
+
+面试题：如何设置取消列表的小圆点？(可以不看)
+面试题：如何设置外边距？
+	margin
+	padding
+
+面试题：js的字符串常用的方法说几个？
+	length、charAt、subString
+
+面试题：js中如何创建一个数组？
+	var array = [a,a,a,a,a,];
+	var array = new Array();
+	
+面试题：js中数组如何添加元素？
+	1、通过下标
+	2、push()
+	
+面试题：js中如何对json进行操作？
+	1、JSON.stringify(); json对象转字符
+	2、JSON.parse(); json字符串对象
+
+面试题：js中“==”和“===”有什么区别？
+	1、“==”比较值
+	2、“===”比较值和类型
+	
+面试题：js中的数据类型有几个？
+	字符类型、数值类型、布尔类型、数组、对象、undefined、null
+
+面试题：eval有什么作用？
+	1、计算表达式的值：eval("1+2");
+	2、解析json：eval("({'name':'tom'})");
+	
+面试题：工作中有没有遇到什么问题？怎么解决的？
+	没有准确答案，往技术方向说
+	
+面试题：Java中的数据类型有几种？
+	1.基本数据类型
+		byte short int long double float boolean char
+					Integer						Character
+	2.引用数据类型
+		2.1 内置类型
+			String、List、Set等
+		2.2 自定义类型
+		
+面试题：i++和++i有什么区别？
+	i++ 先使用后自增（减）
+	++i 先自增（减）后使用
+	
+面试题：&和&&有什么区别？|和||区别？
+	&：位运算符
+	&&：逻辑运算符（短路运算符）
+
+面试题：switch可以支持什么样的数据类型？
+	可以隐式转化为int的类型、枚举、String
+	
+面试题：switch可以支持String类型吗？
+	可以，1.7之后增加
+	
+面试题：switch不添加break会产生什么现象？
+	case穿透
+	
+面试题：while和do-while有什么区别？
+	while先判断后执行
+	do-while先执行后判断，至少执行一次
+	
+面试题：break,return,continue有什么区别？
+	break：1、结束距离最近的循环；2、结束指定的循环，前提是给循环起名字；
+	return：结束整个方法
+	continue：跳过本次循环，进行下一次循环(距离最近的)；2、跳过指定的循环的一次，前提是给循环起名字；
+	
+面试题：如何获取数组的长度？
+	length属性。
+	
+面试题：如何获取集合的长度？
+	size方法。
+	
+面试题：如何获取字符串的长度？
+	length方法。
+	
+面试题：Array和ArryList有什么区别？（数组和list/集合有什么区别）
+	1、数组长度固定，集合长度可变；
+	2、数值能存放任意类型，且必须是同一种类型；集合必须存放对象类型，在不指定泛型的情况下可以存放任意类型（对象）；
+	（3、根据面试情况自行扩展集合的区别）
+	
+面试题：列举几个Java中常见的异常？把英文说出来★
+	空指针:NullPointerException
+	数组下标越界:ArrayIndexOutOfBoundsException
+	除零:ArithmeticException
+	文件找不到异常:FileNotFoundException
+	类找不到异常:ClassNotFoundException
+	类型转换异常:NumberFormatException
+	方法找不到：NoSuchMethodException
+	
+面试题：数组拷贝如何实现？
+	1、循环放到一个新数组中
+	2、System.arrayCopy(Object src,  int  srcPos, Object dest, int destPos, int length);
+	3、Arrays.copyOf();
+	
+面试题：面向对象的特征？
+	封装、继承、多态
+
+面试题：构造方法能不能被私有化？
+	能，不能创建对象；
+	
+面试题：构造方法能不能被重载？ 
+	能，不能被重写
+	
+面试题：构造方法、静态代码块、非静态代码块、普通方法的执行顺序？
+	静态代码块、非静态代码块、构造方法、普通方法
+	
+面试题：构造方法、静态代码块、非静态代码块、普通方法在有继承关系的类中的执行顺序？
+	？
+	
+面试题：重写的访问修饰符/异常有什么要求
+面试题：什么是重载？什么是重写？
+面试题：什么是多态？
+	1、重写和重载
+		重写：
+			1）方法名一样
+			2）参数列表一样
+			3）方法体不同
+			4）异常要求子类要小于等于父类的异常
+			5）访问修饰符要求子类要大于等于父类的访问修饰符
+		
+		重载：
+			1）方法名一样
+			2）参数列表不同（个数、类型、顺序）
+			3）方法体不同
+			4）访问修饰符和异常都不能决定方法的重载
+			
+	2、子类对象指向父类的引用
+	
+面试题：static修饰的属性和方法有什么特征？
+	1、直接通过类名调用
+	2、静态的方法不能被重写；？
+	3、静态的方法能被重载；？
+
+面试题：String能不能被继承？
+	final修饰的
+面试题：final、finally、finallize区别?
+	final：访问修饰符，能修饰类、方法、属性
+	finally：try-cath-finally，始终执行，常用于释放资源
+	finallize：GC，垃圾回收
+
+面试题：抽象类和接口有什么区别？
+	1）抽象类的关键字是：abstract；接口的关键字：interface
+	2）抽象类中可以有抽象方法和普通方法（有抽象方法的类一定是抽象类）
+	3）接口中都是抽象方法和静态常量。1.8之后可以有静态方法和default修饰的方法
+	4）抽象类之间是继承关系；接口和接口之间是继承关系；
+	
+面试题：说一下1.8有什么新特性？
+	1、Lambda表达式：前提必须是函数式接口@FunctionalInterface
+		(p1, p2, ...)->{
+			return;
+		}
+	2、Stream流
+		主要用于操作数据，但是不会对源数据修改
+		Stream提供的方法有：延时方法和终结方法
+	
+面试题：Java中的访问修饰符有哪些？
+	1、有哪几个？
+		public（公共的） default（默认的） protected（受保护的） private（私有的）
+	2、访问的时候有什么要求？
+		default (即默认，什么也不写）: 在同一包内可见，不使用任何修饰符。使用对象：类、接口、变量、方法。
+		private : 在同一类内可见。使用对象：变量、方法。注意：不能修饰类（外部类）
+		public : 对所有类可见。使用对象：类、接口、变量、方法
+		protected : 对同一包内的类和所有子类可见。使用对象：变量、方法。 注意：不能修饰类（外部类）。
+		
+面试题：Java中创建对象的方式有几种?
+	1、new
+	2、clone，Object中提供的方法
+	3、反射，class.forName("类的全限定名称");
+	
+面试题：Java中操作字符串的类有几个？
+	String、StringBuffer、StringBuilder
+	
+面试题：StringBuffer、StringBuilder的区别？
+	1、都属于字符缓冲区
+	2、StringBuffer线程安全，效率低；
+	3、StringBuilder的区别线程不安全，效率高；
+	
+面试题：Java中如何拼接字符串？
+面试题：Java中拼接字符的方式有几种？
+	1、String中的方法concat();
+	2、“+”拼接符号
+	3、StringBuffer、StringBuilder的append();
+
+面试题：字符串创建之后的值是否可变？
+	String创建的字符串的值不可变；引用的地址可变；
+
+面试题：String类中的常用方法？（最少能说5个）
+	1、方法名
+	2、有几个参数，解释参数的含义
+	3、干什么的
+
+	indexOf(arg1); 查询指定参数字符在总的字符中的第一次出现的索引位置；
+	subString(arg1); 从指定的位置截取到最后
+	subString(arg1, arg2); 从指定开始位置截取到指定结束位置，包头不包尾
+	concat(arg1); 拼接字符串
+	trim(); 去空格，两边的空格
+	replace(arg1, arg2); 将字符中的arg1替换为arg2
+	toLowerCase(); 转小写
+	toUpperCase(); 转大写
+	length()：获取字符串长度
+	contains(arg1); 判定字符串中是否包含arg1
+	split(arg1); 将字符按照arg1拆分为数组
+
+面试题：Java中如何进行日期和字符串的相互转换
+	SimpleDateFormat
+		parse(); 字符串转日期
+		format(); 日期转字符串
+	
+	转换的格式必须和定义的格式一致
+
+面试题：Java中如何进行高精度运算
+	BigDecimal
+		divide：除法
+		multiply：乘法
+		add：加法
+		negate：减法
+		
+面试题：Java中数组如何进行排序？
+	1、使用Arrays工具类
+		Arrays.sort(array);
+	2、使用排序算法：冒泡、快速排序
+
+面试题：Java中的集合有几种？分别有什么区别？
+面试题：HashMap和Hashtable和TreeMap有什么区别？
+	Collection
+		List
+			ArrayList、LinkedList
+		Set
+			HashSet、TreeSet
+	Map
+		HashMap、HashTable、TreeMap
+	
+	1、list有序有下标
+	2、set无序无下标
+	3、Map键值对存储，Key不可重复，V可以重复
+	4、ArrayList：底层是动态数组，可变长，增长系数：1.5；查询快，增删慢；初始长度是10；
+		LinkedList：底层是双向链表，增删快，查询慢；
+	5、HashMap：key不能为null；HashTable：key可以为null；TreeMap：key按照字典排序；
+
+面试题：ArrayList的初始长度是多少？
+	10
+	
+面试题：List如何去重？
+	1、循环判断，contince();
+	2、将List中的值放到Set集合中；
+
+面试题：Java中的集合如何去遍历？
+	1、for
+	2、foreach：增强for
+	3、Iterator
+	4、forEach：1.8的新特性
+
+面试题：Java中的集合如何排序？
+	1、Comparable：接口，要求实体类实现该接口，重写compareTo方法
+	2、Comparator：接口，要求使用匿名内部类，重写compareTo方法
+	3、循环排序
+	4、Collections.sort();
+	
+面试题：什么是泛型?
+	1、标识是<>,
+	2、常用于对集合中存放的数据制定规则
+	3、泛型只能是对象，不能是基本类型
+
+	1、泛型方法
+	2、泛型类/接口
+		// 泛型类
+		public class 类名<E>{
+			// 泛型的参数
+			public void 方法名(E e){
+				
+			}
+			
+			// 泛型的返回值
+			public E 方法名(E e){
+				return e;
+			} 
+			
+			// 泛型方法
+			public void 方法名(List<? extends E> list){
+				
+			}
+				
+			// 泛型方法
+			public void 方法名(List<? super E> list){
+				
+			}
+		}
+
+		// 普通类
+		public class 类名{
+			// 泛型的参数
+			public <E> void 方法名(E e){
+				
+			}
+			
+			// 泛型的返回值
+			public <E> E 方法名(E e){
+				return e;
+			}
+			
+		}
+
+面试题：Collections和Collection有什么区别？
+	1、Collection单列集合的顶层接口
+	2、Collections集合提供的工具类
+
+面试题：Java中两个对象使用equals比较，结果是什么？
+	对象中是否重写了equals方法
+		重写了equals方法
+			比较属性的值都一样才是true
+			
+		没有重写equals方法
+			此时，调用的是Object中的equals方法，本质上还是==比较，比较的是内存地址
+
+面试题：如何自定义一个异常？
+	编写类，继承Exception
+
+面试题：Exception和Error有什么区别？
+	Exception：异常，程序员可以控制的；
+	Error：错误，不能人为控制的；
+		内存溢出；
+		
+面试题：Java中如何处理异常？
+	1、捕获：try-catch
+	2、抛出：throws和throw
+
+面试题：throws和throw的区别？
+	1、throws：写在方法体上，用于声明定义该方法可能会发生什么异常；多个异常之间使用逗号隔开；
+	2、throw：写在方法内，用于抛出指定的异常；
+
+面试题：catch多个异常的时候需要注意什么？
+	1、从小到大写
+	2、可以直接罗列到catch，注意不能存在继承关系；
+		catch(NullPointerException | ArrayIndexOutOfBoundsException)
+
+面试题：Java中如何进行文件拷贝？
+	通过流读取和写入
+	
+面试题：Java中流有几种？
+	1、字节流
+		InputStream、FileInputStream、BufferedInputStream
+		OutputStream、FileOutputStream、BufferedOutputStream
+
+	2、字符流
+		Reader、FileReader、BufferedReader
+		Writer、FileWriter、BufferedWriter
+
+面试题：如何如创建线程？
+	1、继承Thread类
+	2、实现Runnable接口
+
+面试题：Thread和Runnable有什么区别？
+	1、Java中是单一继承，在继承了Thread类之后不能再继续继承其他类，不便于功能扩展。
+	2、Java中是多实现，再实现了Runable接口之后，还可以继续实现其他接口和继承其他类，便于功能扩展。
+
+面试题：如何给线程加锁？如何保证线程安全？
+	1、同步代码块
+		synchronized(同步锁){
+			// 代码块儿
+		}
+	2、同步方法
+		public synchronized void 方法名(){
+
+		}
+
+	3、block锁
+		java.util.concurrent.locks.Lock 接口， 提供了比使用synchronized方法和语句可以获得的更广泛的锁定操作。
+
+		创建对象
+			Lock lock = new ReentrantLock();
+			
+		常用方法：
+			lock()：加锁
+			unlock()：释放锁
+			
+面试题：sleep和wait的区别?
+	1、sleep线程休眠，可以指定时间，会自动唤醒，
+	2、wait线程等待，不会自动唤醒，要调用notify方法
+	
+面试题：Java中的值传递和值引用的问题！
+	1、基本数据类型和String是值传递
+	2、对象类型是值引用
+	
+面试题：使用的数据库是什么版本的？
+	9I	10G	11G	12C	18C	19C
+面试题：DDL、DML、DCL有什么区别？
+面试题：数据库约束有几种？
+面试题：Oracle中CLOB和BLOB有什么区别？
+面试题：什么是CLOB？什么是BLOB？
+面试题：char和varchar的区别？varchar和varchar2的区别？
+面试题：Oracle中空字符串和null有什么区别？
+面试题：数据的增删改查语句怎么写？
+面试题：项目中的删除是物理删除还是逻辑删除？
+面试题：更新多个字段怎么更新？
+面试题：模糊查询？
+面试题：in和exists有什么区别?
+面试题：数据库如何排序？升序是什么？降序是什么？
+面试题：数据库如何进行分组，有什么要求？
+面试题：数据库中如何对数据去重？
+	1、distinct
+	2、group by
+面试题：数据库中distinct去重时可以跟多个字段吗？
+面试题：union和union all有什么区别？使用的时候需要注意什么？
+面试题：表之间的关联关系有几种？
+面试题：数据库中的分页怎么写？
+	1、mysql -> limit
+		select * from tableName limit m, n;
+		m：数据的下标
+		n：每页显示条数
+	2、Oracle -> rownum
+面试题：limit只有一个参数代表什么含义？
+面试题：dual是干嘛的?
+面试题：rownum和rowid有什么区别？
+面试题：数据库中如何获取系统时间？
+	1、mysql -> now()
+	2、Oracle -> sysdate
+面试题：count(*) count(1) count(主键)有什么区别？
+面试题：NVL是干嘛的？
+面试题：Decode怎么用？
+面试题：数据库的case-when怎么用?
+面试题：列举几个数据库常用的函数。
+面试题：视图是干嘛的？视图和表有什么区别？
+面试题：索引有什么作用？什么时候需要创建索引？
+面试题：索引是不是越多越好呢？
+面试题：Oracle和MySQL怎么实现主键自增？
+面试题：Oracle和MySQL中日期转字符串和字符串转日期。
+面试题：什么是事务？
+面试题：事务的特性？
+面试题：事务的隔离级别？以及产生的问题。
+面试题：事务的传播特性。
+面试题：Oracle中游标怎么来用？有没有用过游标？
+	1、定义游标；
+	2、打开游标；open 游标名
+	3、提取游标：fetch 游标名
+	4、关闭游标；close
+	
+面试题：有没有用过存储过程？怎么来定义一个存储过程？
+面试题：存储过程和函数有什么关系？
+面试题：什么是B/S？什么是C/S架构
+面试题：Servlet的流程（说配置流程）？
+面试题：Servlet的生命周期是什么？
+面试题：端口号？
+	浏览器默认的端口：80
+	Tomcat默认端口号：8080
+	Oracle默认端口号：1521
+	MySQL默认端口号：3306
+	Redit默认端口号：6379
+	
+面试题：转发和重定向的区别？
+面试题：JSP常用的指令有哪些？
+面试题：JSP的内置对象有哪些？共有9个
+面试题：<c:foreach>怎么用？
+	1、说明标签的含义
+	2、标签有几个属性，同时解释一下含义
+	
+	
+哪一种情况下会报404：
+	1、Tomcat没有启动报错
+	2、路径错误
+		1> 工程名错误
+		2> 请求路径错误
+		3> 响应路径错误
+		
+		
+登录需求
+	成功
+		详细信息展示页面
+			目的是为了展示信息
+			跳转到页面之前必须得先有数据
+				要想有数据，必须要走后台做查询
+				
+			综上所述：登录成功之后走后台查询数据，不是直接走JSP页面
+			
+	失败
+		还是在登陆页面
+		
+删除需求
+	点击删除把主键传到后台
+		成功
+			跳转到删除时的页面（牵扯到分页），展示新的数据，提示删除成功
+		
+		失败
+			跳转到删除时的页面（牵扯到分页），展示新的数据，提示删除失败
+			
+修改需求
+	点击修改把主键传到后台
+		查询当前主键对应的信息（走后台）
+		跳转到修改页面，展示之前查询到的信息
+		
+		点击修改
+			成功
+				跳转到修改时的页面（牵扯到分页），展示新的数据，提示修改成功
+			失败
+				跳转到修改时的页面（牵扯到分页），展示新的数据，提示修改失败
+
+User模块
+
+	LoginSevlet -> login
+		req.getRequestDispatcher("info").forward(req, resp);
+		
+	InfoServlet -> info
+	EditServlet
+	DelServelt
+	
+	||
+	||
+	||
+	
+	UserServlet
+		定义一个标识 -> method 
+							login
+							info
+							edit
+							del
+		
+		doGet/doPost去判断method走响应的方法
+			创建不同的方法即可
+
+
+面试题：文件上传的时候需要注意什么？
+	1、必须有一个文件框
+	2、form表单必须是post提交
+	3、form表单添加enctype="multipart/form-data"
+
+面试题：Session默认的存活时间是多少？
+面试题：Session和Cookie的区别：
+	1、Session存储数据在服务端、Cookie存储数据在客户端
+	2、Session存储数据没有大小限制
+	3、Session存储的数据更安全
+	
+Session操作
+	登录操作
+		成功
+			创建全局Session（用户信息、其他跟改账户相关的信息）
+			跳转到成功之后的页面
+		失败
+			不创建
+
+	注销/退出
+		一定要清除Session
+		跳转到登录页面
+		
+	修改个人信息
+		修改成功
+			清除当前的session
+			跳转到登录页面
+
+购物车
+	一个人一个购物车 -> Map<个人标识, 购物车> -> Map<String, List<Goods>>
+		购物车里很多的商品 -> 集合（List、Map）
+		
+	创建Session
+		把购物车放到Session中
+		
+面试题：Ajax的核心是谁？
+面试题：JQ中的异步请求怎么写？
+	1、哪个方法
+	2、有哪些参数，分别代表什么含义
+面试题：简述一下你对Spring的了解？说一下什么是Spring？
+面试题：说一下spring的注入方式有几种？
+面试题：@Autowired和@Resource的区别？
+面试题：代理模式有几种?
+面试题：AOP如何实现事务？
+	1、配置数据源
+	2、配置事务管理器
+	3.1、配置切面将事务注入到业务层的方法上；（XML）
+		<tx:advice>
+	3.2、在需要添加事务的方法或者类上添加@Transactional；（注解）
+	
+面试题：多个切面的执行顺序是怎么样的?
+
+面试题：AOP的应用场景有哪些？
+	事务、日志、权限等
+	
+面试题：常见的数据库连接池有几种？
+	阿里、C3P0、DBCP
+	
+面试题：数据库连接池是什么？
+	
+
+面试题：什么是MyBatis？
+	1、ORM
+	2、持久层
+	3、半自动化
+	
+面试题：MyBatis映射文件的namespace可以省略吗？
+	3.0之后不能省略
+	
+面试题：MyBatis的持久层的接口的方法可以重载吗？
+	不可以
+	
+面试题：MyBatis如何解决多个参数的问题？
+	1、arg0
+	2、param2
+	3、@Param
+	
+面试题：MyBatis的常用标签有哪些？
+	<select>
+	<update>
+	<delete>
+	<insert>
+
+面试题：MyBaits如何实现动态SQL？
+	where、set、choose、sql、foreach、if、trim
+	
+面试题：MyBatis中#和$的区别？
+	
+面试题：resultMap是干嘛的？
+面试题：MyBatis如何调用存储过程？
+面试题：maven命令？导包的标签？
+面试题：mybatis 中SQL文是怎么被执行到的？
+
+面试题：mybatis怎么防止入参为空（无效列类型：1111）？
+面试题：如何解决Map映射为空的问题？
+	callSettersOnNulls = true
+	
+面试题：MyBatis的核心是谁？
+	SqlSessionFactory
+	
+面试题：SpringMVC的工作流程？
+	图
+面试题：SpringMVC如何操作JSON数据？
+	@RequestBody
+	@ResponseBody
+	
+	@RestController
+面试题：@Controller和@RestController有什么区别？
+面试题：如何使用自定义类型转换器？
+	1、创建类实现Converter
+	2、注册自定类型转换器到SpringMVC
+面试题：SpringMVC如何重定向和转发？
+	1、默认就是转发
+	2、redirect:
+	
+面试题：SpringMVC组件有哪些?
+	1、核心控制器（DispatcherServlet）
+	2、处理器映射器（HandlerMapping）
+	3、处理器适配器（HandlerAdapter）
+	4、处理器（Hander）
+	5、视图解析器（ViewResolver）
+	6、自定义类型转换器（Converter）
+	7、异常处理器（HandlerExceptionResolver）
+	8、文件上传的解析器（CommonsMultipartResolver）
+	9、拦截器（Interceptor）
+
+面试题：拦截器和过滤器的区别？
+	1、过滤器：Filter；拦截器：Interceptor
+	2、过滤器是Servlet的一个标准组件，任何的web项目都可以使用；拦截器是SpringMVC的组件，只能在SpringMVC中使用
+	3、拦截器只拦截控制器的请求
+面试题：SpringMVC中如何自定义拦截器？
+	HandlerInterceptorAdapter
+	HandlerInterceptor
+	
+面试题：如何防止表单重复提交？
+	1、提交之后把提交按钮禁用掉。
+	2、通过自定义拦截器和自定义注解实现表单重复提交
+	
+面试题：SpringMVC如何解决静态资源被拦截的问题?
+	1、只拦截*.后缀的方式
+	
+	前提是"/","/*"
+	2、<mvc:default-servlet-handler/>
+	3、<mvc:resources mapping="/img/*" location="/img/"/> 
+	4、在web.xml中配置
+		<servlet-mapping>
+			<servlet-name>default</servlet-name>
+			<url-pattern>*.png</url-pattern>
+			<url-pattern>*.js</url-pattern>
+			<url-pattern>*.css</url-pattern>
+			<url-pattern>*.gif</url-pattern>
+			<url-pattern>*.jpg</url-pattern>
+		</servlet-mapping>
+
+面试题：SSM集成分别配置什么东西？
+	SpringMVC都配置什么？
+		1、处理器（Controller）的一个扫描
+		2、文件上传的解析器
+		3、拦截器
+		4、自定义类型转换器
+		5、异常处理器
+	
+	Spring都配置什么？
+		Spring-config
+			1、Service、Dao的整合（扫描注解）
+			2、增强/通知
+		Spring-dao
+			3、数据源
+			4、事务
+			5、MyBatis其他的配置
+			
+面试题：JSP从一个页面跳转另一个页面有哪几种方法？
+	1、使用超链接<a href="#">页面</a>
+	2、<jsp:forward page="#"></jsp:forward>
+	3、走后台
+
+面试题：描述JSP和Servlet的区别、共同点?
+	共同点：
+		1、JSP本身就是一个Servlet，在Tomcat运行后可以看到一个JSP对应的java文件。
+	区别：
+		2、JSP多用于做页面展示
+		3、Servlet多用于做业务逻辑
+	
+面试题：JSP中动态包含(jsp:include)和静态包含(<% @include %>)？
+	
+面试题：说几个SpringMVC中常用的注解。
+	@Controller
+	@RestController
+	@RequestMapping
+	@GetMapping：接收Get请求
+	@PostMapping：接收Post请求
+	@DeleteMapping：接收Delete请求
+	@PutMapping：接收Put请求
+	@RequestParam
+	@PathVariable
+
+面试题：控制反转(IOC)和依赖注入(DI)有什么关系？
+	IOC：对象的创建
+	DI：维护对象之间的关系
+	
+面试题：Spring中如何控制所管理的bean的生命周期？
+	@Scope(session)
+
+面试题：SpringMVC是单例模式还是多例模式？
+	默认是单例模式
+	
+面试题：SpringMVC如何把单例模式修改为多例模式？
+	@Scope(prototype)
+面试题：什么是单例模式什么是多例模式？
+
+面试题：SpringBoot的常用注解？
+	@SpringBootApplication
+	@EnableAutoConﬁguration
+	@ConﬁgurationProperties
+	@Value
+	
+面试题：YML中""和''有什么区别？
+	字符串不用添加引号
+	"" -> 会把字符中的特殊字符按照自身的含义表示
+	'' -> 会把字符中的特殊字符按照字符串表示
+面试题：thymeleaf中常用的标签？
+	th:src
+	th:href
+	th:id
+	
+	th:value -> 给value属性赋值
+	th:text -> 给HTML标签中添加文本，会把字符原样输出
+	th:utext -> 给HTML标签中添加文本，会把字符中的特殊字符转义
+	th:if -> 判断
+	th:each -> 遍历，和th:text或th:value一起使用
+	th:object -> 引入对象/声明变量，和*{}一起使用
+	th:attr -> 替换属性
+	
+面试题：th:insert、th:replace、th:incloud三者的区别？
+	th:insert -> 引入其他页面内容，将被引用的模板片段插⼊到自己的标签体中
+	th:replace -> 引入其他页面内容，将被引用的模板片段替换掉自己
+	th:incloud -> 引入其他页面内容，类似于 th:insert，⽽不是插⼊⽚段，它只插⼊此⽚段的内容。
+	Thymeleaf 3.0 之后不再推荐使⽤ th:include.
+
+
+对日：
+-----------------------------------------------------------------------------------------
+面试题：简述一下对日流程。
+
+	1、开发阶段
+		基本设计书 -> 详细式样书 -> 式样理解 -> 编码/开发 -> selfCheck(自检) -> review(他检) -> 下一个阶段
+		
+		1> 根据基本设计编写详细设计
+		2> 根据详细设计和基本设计书开始编码
+		3> 编码过程中如果有问题了，可以提出QA
+		4> 编码结束可以进行自检
+		5> 自检之后进行他检
+		6> 修改他检出现的问题(review票)，修改之后重新检查；如果有问题，继续修改，直到没有问题
+		
+		基本设计书一般情况是客户方给定
+		
+	2、测试阶段
+	
+面试题：详细设计书是谁给的？
+
+		详细设计书
+			客户方给定
+			根据基本设计编写详细设计
+		
+面试题：开发阶段的成果物有哪些？
+	0、详细设计书
+	1、代码
+	2、QA
+	3、selfCheck
+	4、review票
+
+面试题：开发的依据是什么？
+	详细设计（※）
+	基本设计
+	开发规约
+	UI设计
+	DB设计
+	Message一览
+	
+面试题：开发规约需要注意什么？
+	1、命名问题
+		类（一般参照技能ID Lmm108）、方法（动词的形式、参照之前的代码）、变量、常量
+	2、注释问题
+		类注释：类的功能描述、开发者、开发时间、版本号
+		方法注释：方法的功能描述、参数、异常等
+		单行注释：单行代码的功能
+		多行注释：某一块儿的功能
+	3、代码的写法问题
+		判断：最多不要超过3层
+		循环：最多不要超过3层
+		赋值
+		每行的最大长度：200
+		每个类的最大行数：1000行
+		空行、空格
+
+面试题：你提过QA吗？都提的什么QA？
+	1、式样理解的时候
+		表中的字段不存在、表的字段给错了、式样暧昧、式样书中让参照的文档不存在、逻辑欠缺(技能遗漏)
+		式样书编写的内容前后不一致
+
+	2、编码过程
+		表中的字段不存在、表的字段给错了、逻辑错误
+		表字段的位数不够
+		
+	3、测试阶段提出业务逻辑不对
+	
+	QA的写法问题：
+		1、尽可能把问题细化：指出哪本式样书的哪个sheet的哪一行
+		2、QA中写语法尽可能从式样书粘贴
+		3、写法最好使用敬语（参照模板）
+		4、针对式样描述暧昧不清或者有问题的情况下，最好能有一个解决方案
+		5、文字不好描述的时候可以使用附件的形式
+
+面试题：自检的时候都检查什么内容？
+	1、代码格式问题（缩进、注释、命名规范：【类、变量、常量、方法等】）
+	2、逻辑问题（功能逻辑是否正确、功能逻辑是否缺失）
+
+面试题：除了checkList中的内容，项目中还需要检查什么？
+	恒展开一览（大家共性的问题，可能不存在于式样书中）
+
+面试题：代码review的时候review票都填哪些内容？
+	1、是哪个技能的（技能ID、以及技能名称）
+	2、担当者
+	3、review者、review时间
+	4、问题的件数
+	5、问题的发生地点
+	6、问题的解决方案
+	7、发生问题的原因：自己的原因、式样书的原因
+	8、确认者和确认时间
+
+面试题：进度的提报。
+	1、进度的完成情况
+	2、遇到的问题
+	3、有问题、进度延迟一定要提前汇报
+	
+面试题：开发过程中发现QA，跟组长确认之后，组长说不需要提QA时怎么办？
+	一切按照式样为准
+
+面试题：项目中的静态页面是谁提供的？
+	客户
+	项目组制作
+	
+面试题：项目中的SQL是自己写的还是给好的？
+	1、有的是式样书中以文字的形式表述的，查询哪些字段，查询的表、关联关系
+	2、一些重要的业务的SQL是客户给的
+
+面试题：QA有几种状态？
+	已提出
+	关闭
+	再提出
+	
+面试题：SVN如何操作公共文件？
+	1、先备份自己的文件
+	2、加锁，加锁的同时会提示更新
+	3、把自己写的部分粘贴到文件中
+	4、提交，提交的同时会自动解锁
+	
+面试题：代码上传的时候需要注意什么？
+	1、错误代码不要上传
+	2、编译后的文件（class）不要上传
+	3、开发工具自动生成的对项目的管理的配置文件
+
+面试题：开发和测试是怎么进行的？
+	1、开发阶段完成之后开始测试
+	2、边开发边测试
+
+面试题：测试的时候是怎么测试的？是自己测试自己的还是交叉测试？
+面试题：项目的代码量有多少？case数有多少？bug数有多少？
+一般1000:100:10
+面试题：测试的时候case数没有达到要求的时候要怎么办？
+
+面试题：开发阶段的产物有哪些？
+面试题：测试阶段的产物有哪些？
+面试题：selfCheck都确认哪些东西？
+ 
+对开发的代码进行自我审查的阶段，通过项目组提供的审查文档，挨个项目确认，是否满足
+要求。没有问题的使用【〇（まる）】标识，有问题的使用 【×（ばつ）】标识。自检文档也是开
+发阶段的重要产物。
+自检主要从开发规约（格式、注释、编码规范等）、功能实现两个方面入手。
+
+面试题：review票有哪几部分组成？
+面试题：Bug票由哪几部分组成？
+面试题：项目的规模多大（人月数）？
+面试题：项目在哪儿做的？
+面试题：项目中BUG率的要求是多少？如果不达标怎么办？
+面试题：测出BUG ，SOURCE是谁来修正的？
+
+
+
+
+
